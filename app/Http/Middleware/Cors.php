@@ -13,7 +13,7 @@ class Cors
      * @param  \Illuminate\Http\Request  $request
      * @return string|null
      */
-   public function handle($request, Closure $next)
+   public function handle(Request $request , Closure $next)
   {
     return $next($request)
     //Acrescente as 3 linhas abaixo
