@@ -37,3 +37,22 @@
   - Otimizações de código.
   - Aplicação de teste automatizados.
   - Mapear e gerar documentação dos end-poits da API, através da ferramenta swagger.
+
+
+# Orientações para teste local
+  - Realize o download ou clone e execute o comando composer install.
+  - Configue o arquivo .inv com as informações de acesso ao banco de dados:
+  
+        DB_CONNECTION=mysql         -> Drivers de conexão, caso use postgres deve instalar alguns 
+                                       arquivos complementares para realizar o acesso.
+        DB_HOST=127.0.0.1           -> Endereço de acesso
+        DB_PORT=3306                -> Porta de acesso
+        DB_DATABASE=my_db           -> nome do seu banco de dados
+        DB_USERNAME=root            -> usuário do seu banco de dados
+        DB_PASSWORD=                -> senha de acesso ao seu banco de dados
+        
+  - Realize a geração do jwt:key com o comando: php artisan jwt:secret
+  - Crie a estrutura do banco de dados com o comando: php artisan migrate
+  - Caso queira popular o banco de dados com informações de teste use o comando: php artisan db::seed  
+    gerando registros de clientes e um usuário padrão com as credenciais admin@admin.com e senha admin9999
+  - Realizado as etapas anteriores pode rodar a api executando o comando: php artisan serve
