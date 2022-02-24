@@ -1,13 +1,5 @@
 <?php
 
-/*
-    header("Cache-Control: no-cache, must-revalidate");
-    header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
-    header('Access-Control-Allow-Origin:  *');
-    header('Access-Control-Allow-Methods:  POST, GET, OPTIONS, PUT, DELETE');
-    header('Access-Control-Allow-Headers:  Content-Type, X-Auth-Token, Origin, Authorization');
-*/
-
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CarroController;
 use App\Http\Controllers\ClienteController;
@@ -37,10 +29,7 @@ Route::prefix('auth')->group(function(){
 });
 
 //Rotas relacionadas ao cliente
-Route::post('cliente', [ClienteController::class, 'store']);
-
-
-//Route::apiResource('cliente', ClienteController::class);
+Route::apiResource('cliente', ClienteController::class);
 Route::get('cliente_dashboard', [ClienteController::class, 'clienteDashboard']);
 
 //Rotas relacionadas ao carro
