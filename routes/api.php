@@ -5,7 +5,7 @@ use App\Http\Controllers\CarroController;
 use App\Http\Controllers\ClienteController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use \App\Http\Middleware\CORS;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
