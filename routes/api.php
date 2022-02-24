@@ -29,7 +29,7 @@ Route::prefix('auth')->group(function(){
 });
 
 //Rotas relacionadas ao cliente
-Route::apiResource('cliente', ClienteController::class);
+Route::apiResource('cliente', ClienteController::class)->middleware('CORS');
 Route::get('cliente_dashboard', [ClienteController::class, 'clienteDashboard']);
 
 //Rotas relacionadas ao carro
