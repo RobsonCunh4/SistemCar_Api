@@ -40,9 +40,6 @@ Route::apiResource('carro', CarroController::class);
 Route::get('carro_dashboard', [CarroController::class, 'carroDashboard']);
 Route::get('carro_historico/{carro}', [CarroController::class, 'carro_historico']);
 
-Route::get('oi', function () {
-    return 'oi';
-});
 
 
 
