@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'paths' => ['api/*', 'sanctum/csrf-cookie', '*'],
+    'paths' => ['api/*', 'sanctum/csrf-cookie', '*', ' https://sistemcarback.herokuapp.com/api/*'],
 
     'allowed_methods' => ['*'],
 
