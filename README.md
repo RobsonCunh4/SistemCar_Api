@@ -36,3 +36,4 @@
   - Atualização de versão.
   - Otimizações de código.
   - Aplicação de teste automatizados.
+  - Mapear e gerar documentação dos end-poits da API, através da ferramenta swagger.
