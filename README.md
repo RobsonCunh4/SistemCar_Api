@@ -55,4 +55,4 @@
   - Crie a estrutura do banco de dados com o comando: php artisan migrate
   - Caso queira popular o banco de dados com informações de teste use o comando: php artisan db::seed  
     gerando registros de clientes e um usuário padrão com as credenciais admin@admin.com e senha admin9999
-  - Realizado as etapas anteriores pode rodar a api executando o comando: php artisan serve
+  - Realizado as etapas anteriores, pode-se rodar a api executando o comando: php artisan serve
