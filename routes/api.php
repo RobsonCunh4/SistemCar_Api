@@ -28,8 +28,10 @@ Route::prefix('auth')->group(function(){
     Route::get('usuario_dashboard', [AuthController::class, 'usuarioDashboard']);
 });
 
+Route::post('cliente', [ClienteController::class, 'store']);
+
 //Rotas relacionadas ao cliente
-Route::apiResource('cliente', ClienteController::class);
+//Route::apiResource('cliente', ClienteController::class);
 Route::get('cliente_dashboard', [ClienteController::class, 'clienteDashboard']);
 
 //Rotas relacionadas ao carro
