@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware(['cors'])->group(function () {
+//Route::middleware(['cors'])->group(function () {
     
     //grupo de  rotas relacionadas ao usuario
     //Definindo prefixo (prefix('auth'))
@@ -39,6 +39,6 @@ Route::middleware(['cors'])->group(function () {
     Route::get('carro_dashboard', [CarroController::class, 'carroDashboard']);
     Route::get('carro_historico/{carro}', [CarroController::class, 'carro_historico']);
 
-});
+//});
 
 
