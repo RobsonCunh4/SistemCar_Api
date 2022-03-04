@@ -35,7 +35,13 @@ use Illuminate\Support\Facades\Route;
     Route::get('cliente_dashboard', [ClienteController::class, 'clienteDashboard']);
 
     //Rotas relacionadas ao carro
-    Route::apiResource('carro', CarroController::class); 
+    //Route::apiResource('carro', CarroController::class); 
+
+    Route::post('carro', [AuthController::class, 'store']);
+    Route::get('carro', [AuthController::class, 'index']);
+   // Route::put('carro/{id}', [AuthController::class, 'update']);
+    //Route::delete('carro/{id}', [AuthController::class, 'delete']);
+
     Route::get('carro_dashboard', [CarroController::class, 'carroDashboard']);
     Route::get('carro_historico/{carro}', [CarroController::class, 'carro_historico']);
 
