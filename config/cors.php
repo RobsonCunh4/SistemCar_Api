@@ -15,11 +15,11 @@ return [
     |
     */
 
-    'paths' => ['api/*', 'api/carro', 'api/cliente', 'sanctum/csrf-cookie', '*'],
+    'paths' => ['api/*', 'sanctum/csrf-cookie', '*'],
 
-    'allowed_methods' => ['POST', 'GET', 'DELETE', 'PUT', '*'],
+    'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['https://sistemcarfront.herokuapp.com', 'http://localhost:8080', '*'],
+    'allowed_origins' => ['*'],
 
     'allowed_origins_patterns' => [],
 

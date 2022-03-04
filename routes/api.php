@@ -17,26 +17,28 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//grupo de  rotas relacionadas ao usuario
-//Definindo prefixo (prefix('auth'))
-Route::prefix('auth')->group(function(){
-    Route::post('me', [AuthController::class, 'me']);
-    Route::post('logout', [AuthController::class, 'logout']);
-    Route::post('refresh', [AuthController::class, 'refresh']);    
-    Route::post('login', [AuthController::class, 'login']);
-    Route::post('registro', [AuthController::class, 'registro']);
-    Route::get('usuario_dashboard', [AuthController::class, 'usuarioDashboard']);
+Route::middleware(['cors'])->group(function () {
+    
+    //grupo de  rotas relacionadas ao usuario
+    //Definindo prefixo (prefix('auth'))
+    Route::prefix('auth')->group(function(){
+        Route::post('me', [AuthController::class, 'me']);
+        Route::post('logout', [AuthController::class, 'logout']);
+        Route::post('refresh', [AuthController::class, 'refresh']);    
+        Route::post('login', [AuthController::class, 'login']);
+        Route::post('registro', [AuthController::class, 'registro']);
+        Route::get('usuario_dashboard', [AuthController::class, 'usuarioDashboard']);
+    });
+
+    //Rotas relacionadas ao cliente
+    Route::apiResource('cliente', ClienteController::class);
+    Route::get('cliente_dashboard', [ClienteController::class, 'clienteDashboard']);
+
+    //Rotas relacionadas ao carro
+    Route::apiResource('carro', CarroController::class); 
+    Route::get('carro_dashboard', [CarroController::class, 'carroDashboard']);
+    Route::get('carro_historico/{carro}', [CarroController::class, 'carro_historico']);
+
 });
-
-//Rotas relacionadas ao cliente
-Route::apiResource('cliente', ClienteController::class);
-Route::get('cliente_dashboard', [ClienteController::class, 'clienteDashboard']);
-
-//Rotas relacionadas ao carro
-Route::apiResource('carro', CarroController::class); 
-Route::get('carro_dashboard', [CarroController::class, 'carroDashboard']);
-Route::get('carro_historico/{carro}', [CarroController::class, 'carro_historico']);
-
-
 
 
